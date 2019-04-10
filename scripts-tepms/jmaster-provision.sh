@@ -5,7 +5,7 @@ installJenkins() {
         sudo apt install oracle-java8-installer
 	wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
 	sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-	apt-get update -y && apt-get install jenkins 
+	apt-get update -y && apt-get install jenkins=2.164.2 -y # 2.73.3 -y
 	sudo systemctl start jenkins
 }
 
